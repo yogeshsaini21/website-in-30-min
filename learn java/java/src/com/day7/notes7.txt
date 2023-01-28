@@ -1,0 +1,127 @@
+Iterative Statement:
+These statements are able to allow JVM to execute a set of instructions repeatedly on the
+basis of a particular condition.
+EX: for, while, do-while
+1. for loop:
+	In general, we will utilize for loop when we aware no of iterations in advance before writing loop.
+	Syntax:
+		for(Expr1; Expr2; Expr3)
+		{
+			----instructions-----
+		}
+
+Example:
+	 
+	public class Main {
+		public static void main(String[] args) {
+			for(int i=0;i<10;i++) {
+			System.out.println(i);
+			}
+		}
+	}
+
+e.g 2
+
+	 
+	public class Main {
+		public static void main(String[] args) {
+			System.out.println("Before Loop");
+			for(int i=0; true ;i++){
+			System.out.println("Inside Loop");
+			}
+			System.out.println("After Loop");
+		}
+	}
+
+Status: Compilation Error, Unreachable Statement
+
+2. while loop:
+
+In java applications, when we are not aware the no of iterations in advance before writing
+loop there we should utilize 'while' loop.
+
+Syntax: 
+	while(Condition)
+	{
+		---instructions-----
+	}
+
+example
+public class Main {
+public static void main(String[] args)
+	{
+	int i=0;
+	while(i<10)
+	{
+		System.out.println(i);
+		i=i+1;
+		}
+	}
+}
+
+example
+
+public class Main{
+
+public static void main(String[] args){
+
+	System.out.println("Before Loop");
+	while(true)
+	{
+	System.out.println("Inside Loop");
+	}
+	System.out.println("After Loop");
+	}
+}
+Status: Compilation Error, Unreachable Statement.
+
+
+3. do-while loop:
+	Difference between while loop and do-while loop:
+	1. While loop is not giving any guarantee to execute loop body minimum one time.dowhile loop will give guarantee to execute loop 	body minimum one time
+
+	2. In case of while, first, conditional expression will be executes, if it returns true
+	then only loop body will be executed. In case of do-while loop, first loop body will be
+	executed then condition will be executed.
+
+	3. In case of while loop, condition will be executed for the present iteration.
+	In case of do-while loop, condition will be executed for the next iteration.
+
+Syntax:
+	do
+	{
+	---instructions---
+	}
+	
+
+while(Condition);
+
+public class Main
+{
+public static void main(String[] args)
+{
+int i=0;
+do
+{
+System.out.println(i);
+i=i+1;
+}
+while (i<10);
+}
+}
+Example 2:
+package com.masai;
+public class Main
+{
+public static void main(String[] args)
+{
+System.out.println("Before Loop");
+do
+{
+System.out.println("Inside Loop");
+}
+while (true);
+System.out.println("After Loop");
+}
+}
+Status: Compilation Error, Unreachable Statement
